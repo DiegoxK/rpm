@@ -28,6 +28,7 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
+      <Contact />
     </main>
   );
 }
@@ -211,6 +212,20 @@ const About = () => {
         {qualities.map((quality, index) => (
           <AboutCard key={index} {...quality} />
         ))}
+      </div>
+    </Section>
+  );
+};
+
+const Contact = () => {
+  return (
+    <Section id="contact" className="flex-col gap-20">
+      <h2 className="text-center text-3xl">¿Listo para empezar?</h2>
+      <div className="flex flex-col gap-5">
+        <p className="text-center">
+          Cuéntanos sobre tu proyecto y te ayudaremos a llevarlo a otro nivel.
+        </p>
+        <Button className="rounded-full capitalize">Contactar</Button>
       </div>
     </Section>
   );
