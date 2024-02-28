@@ -14,9 +14,9 @@
     --popover-foreground: #ffffff;
 
     --primary: #38b6ff;
-    --primary-foreground: #ffffff;
+    --primary-foreground: #000000;
 
-    --secondary: #000000;
+    --secondary: #ef43cf;
     --secondary-foreground: #ffffff;
 
     --muted: #f4f4f5;
@@ -42,15 +42,30 @@
   }
 }
 
-/* #hero::before {
+#hero::before,
+#about::before,
+#services::before {
   z-index: -1;
   position: absolute;
   content: "";
-  top: calc(25% - 150px);
-  left: calc(35% - 150px);
   width: 300px;
   height: 300px;
   border-radius: 50%;
   background-color: #bb6ce6da;
   filter: blur(140px);
-} */
+}
+
+#hero::before {
+  top: calc(25% - 150px);
+  left: calc(25% - 150px);
+}
+
+#services::before {
+  top: calc(25% - 150px);
+  left: calc(50% - 150px);
+}
+
+#about::before {
+  top: calc(25% - 150px);
+  right: calc(25% - 150px);
+}

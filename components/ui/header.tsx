@@ -4,14 +4,12 @@ import MobileNav from "./navigation/mobile-nav";
 
 export default function Header() {
   return (
-    <header className="container sticky top-0 z-50 w-full py-2">
+    <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 container top-0 z-50 w-full pt-4 backdrop-blur md:px-20">
       <div className="flex h-14 items-center">
         <div className="flex w-full items-center justify-between">
           <MainNav />
           <MobileNav />
-          <Button className="rounded-full px-8 font-semibold text-black">
-            Contacto
-          </Button>
+          <Button className="rounded-full px-12 font-semibold">Contacto</Button>
         </div>
       </div>
     </header>
