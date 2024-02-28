@@ -25,7 +25,7 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div>
+      <div className="hidden md:block">
         <Image src={assets.hero} width={400} height={400} alt="heroImage" />
       </div>
     </section>
