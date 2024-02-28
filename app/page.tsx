@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="flex gap-20 justify-center items-center">
-      <div className="flex flex-col gap-5 w-[600px]">
-        <div>
+    <section id="hero" className="flex items-center justify-center gap-20">
+      <div className="flex w-[550px] flex-col gap-5">
+        <div className="mb-10">
           <Image src={assets.logo} width={250} height={250} alt="siteLogo" />
         </div>
-        <div className="uppercase flex flex-col gap-5">
+        <div className="flex flex-col gap-5 uppercase">
           <p className="text-5xl font-extralight">a tu alcance</p>
           <h1 className="text-4xl font-bold">
             Más exposición, más clientes, más beneficios.
@@ -20,7 +20,7 @@ export default function Home() {
             Creamos el ecosistema digital de tu negocio, hacemos marketing
             efectivo y multiplicamos tu exposición online.
           </p>
-          <Button className="text-black font-bold rounded-full">
+          <Button className="rounded-full font-bold text-black">
             ¡SÍ, QUIERO ESO!
           </Button>
         </div>

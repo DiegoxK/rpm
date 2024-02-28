@@ -41,3 +41,16 @@
     @apply border-border;
   }
 }
+
+/* #hero::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  top: calc(25% - 150px);
+  left: calc(35% - 150px);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #bb6ce6da;
+  filter: blur(140px);
+} */
