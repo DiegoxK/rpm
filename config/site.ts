@@ -1,4 +1,5 @@
 import logo from "@/public/RPMLogo.svg";
+import hero from "@/public/heroimg.svg";
 
 type NavigationItem = {
   name: string;
@@ -23,13 +24,10 @@ export const siteConfig: SiteConfig = {
       name: "Planes",
       url: "/plans",
     },
-    {
-      name: "Contacto",
-      url: "/contact",
-    },
   ],
 };
 
 export const assets = {
   logo,
+  hero,
 };

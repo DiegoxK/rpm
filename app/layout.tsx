@@ -19,12 +19,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background text-foreground antialiased",
+          "min-h-screen container bg-background flex flex-col gap-10 text-foreground antialiased",
           MontserratFont.className,
         )}
       >
         <Header />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );

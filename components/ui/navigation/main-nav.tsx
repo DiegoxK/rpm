@@ -9,9 +9,9 @@ import Image from "next/image";
 export default function MainNav() {
   return (
     <div className="mr-4 hidden md:flex">
-      <NavLink href="/" className="me-6">
+      {/* <NavLink href="/" className="me-6">
         <Image src={assets.logo} width={100} height={100} alt="logo" priority />
-      </NavLink>
+      </NavLink> */}
       <nav className="flex items-center space-x-6 font-medium">
         {siteConfig.navigation.map((link) => (
           <NavLink key={link.url} href={link.url}>
