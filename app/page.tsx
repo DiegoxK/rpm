@@ -5,17 +5,23 @@ import Image, { StaticImageData } from "next/image";
 
 const Section = ({
   children,
+  hero,
   id,
   className,
 }: {
   children: React.ReactNode;
+  hero?: boolean;
   id: string;
   className: string;
 }) => {
   return (
     <section
       id={id}
-      className={cn("relative flex min-h-screen justify-center", className)}
+      className={cn(
+        "relative flex items-center justify-center overflow-ellipsis",
+        hero ? "min-h-[calc(100vh-160px)]" : "min-h-screen",
+        className,
+      )}
     >
       {children}
     </section>
@@ -35,7 +41,7 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <Section id="hero" className="items-center gap-20">
+    <Section hero id="hero" className="gap-20">
       <div className="flex flex-col gap-5">
         <div className="mb-10">
           <Image
@@ -138,7 +144,7 @@ const Services = () => {
   };
 
   return (
-    <Section id="services" className=" flex-col gap-20">
+    <Section id="services" className="flex-col gap-20">
       <h2 className="text-3xl">¿Cómo lo hacemos?</h2>
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => (
@@ -229,7 +235,7 @@ const Contact = () => {
           te contactaremos lo antes posible. Sin compromisos, sin tácticas de
           venta molestas. No desperdiciaremos tu tiempo.
         </p>
-        <div className="mx-40 flex flex-col gap-5">
+        <div className="flex flex-col gap-5 md:mx-40">
           <div className="grid grid-cols-2 gap-5">
             <input className="rounded-md" type="text" placeholder="Nombre" />
             <input className="rounded-md" type="email" placeholder="Correo" />
