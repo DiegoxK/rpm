@@ -30,7 +30,7 @@ const Section = ({
 
 export default function Home() {
   return (
-    <main className="container flex flex-col gap-12 py-10 md:px-20">
+    <main className="container flex flex-col gap-12 overflow-hidden py-10 md:overflow-visible md:px-20">
       <Hero />
       <Services />
       <About />
