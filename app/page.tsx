@@ -15,7 +15,7 @@ const Section = ({
   return (
     <section
       id={id}
-      className={cn("relative flex min-h-screen items-center", className)}
+      className={cn("relative flex min-h-screen justify-center", className)}
     >
       {children}
     </section>
@@ -35,7 +35,7 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <Section id="hero" className="gap-20">
+    <Section id="hero" className="items-center gap-20">
       <div className="flex flex-col gap-5">
         <div className="mb-10">
           <Image
@@ -220,12 +220,33 @@ const About = () => {
 const Contact = () => {
   return (
     <Section id="contact" className="flex-col gap-20">
-      <h2 className="text-center text-3xl">¿Listo para empezar?</h2>
+      <h2 className="text-center text-3xl">
+        Contáctanos para un Análisis de Marketing gratuito
+      </h2>
       <div className="flex flex-col gap-5">
         <p className="text-center">
-          Cuéntanos sobre tu proyecto y te ayudaremos a llevarlo a otro nivel.
+          ¿Te gustaría saber que podemos hacer por ti? Rellena el formulario y
+          te contactaremos lo antes posible. Sin compromisos, sin tácticas de
+          venta molestas. No desperdiciaremos tu tiempo.
         </p>
-        <Button className="rounded-full capitalize">Contactar</Button>
+        <div className="mx-40 flex flex-col gap-5">
+          <div className="grid grid-cols-2 gap-5">
+            <input className="rounded-md" type="text" placeholder="Nombre" />
+            <input className="rounded-md" type="email" placeholder="Correo" />
+          </div>
+          <div className="grid grid-cols-2 gap-5">
+            <input
+              className="rounded-md"
+              type="text"
+              placeholder="Nombre de la empresa"
+            />
+            <input className="rounded-md" type="tel" placeholder="Teléfono" />
+          </div>
+          <textarea className="rounded-md" placeholder="Mensaje" />
+          <Button variant="secondary" className="rounded-full capitalize">
+            Enviar
+          </Button>
+        </div>
       </div>
     </Section>
   );

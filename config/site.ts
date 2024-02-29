@@ -5,9 +5,9 @@ import WebDesign from "@/public/services/WebDesign.webp";
 import Strategies from "@/public/services/Strategies.webp";
 import Advertisement from "@/public/services/Advertisement.webp";
 
-import Local from "@/public/About/Local.svg";
-import Results from "@/public/About/Results.svg";
-import Specialized from "@/public/About/Specialized.svg";
+import Local from "@/public/about/Local.svg";
+import Results from "@/public/about/Results.svg";
+import Specialized from "@/public/about/Specialized.svg";
 
 type NavigationItem = {
   name: string;
