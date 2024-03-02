@@ -39,8 +39,6 @@ export function NavLink({
 }: NavLinkProps): JSX.Element | null {
   const pathname = usePathname();
 
-  console.log(pathname, href);
-
   return (
     <Link
       className={cn(
