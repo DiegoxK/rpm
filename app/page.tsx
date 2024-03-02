@@ -23,6 +23,16 @@ const Section = ({
         className,
       )}
     >
+      <img
+        className="hidden"
+        src="https://tracker.metricool.com/c3po.jpg?hash=a892bac29f6bda6ed0763d28ba9fb14e"
+      />
+      {/* <TrackerLoader
+        scriptUrl="https://tracker.metricool.com/resources/be.js"
+        callback={() => {
+          console.log("Metricool tracker loaded");
+        }}
+      /> */}
       {children}
     </section>
   );
