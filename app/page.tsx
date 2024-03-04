@@ -144,7 +144,7 @@ const Services = () => {
 
   return (
     <Section id="services" className="flex-col gap-20">
-      <h2 className="text-3xl">¿Cómo lo hacemos?</h2>
+      <h2 className="text-center text-3xl">¿Cómo lo hacemos?</h2>
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
