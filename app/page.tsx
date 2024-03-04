@@ -55,7 +55,7 @@ const Hero = () => {
         <div className="flex flex-col gap-5 uppercase">
           <p className="text-4xl font-extralight">a tu alcance</p>
           <h1 className="text-4xl font-bold">
-            Más exposición, más clientes, más beneficios.
+            Más exposición, más clientes, más ganancias.
           </h1>
         </div>
         <div className="flex flex-col gap-5">
@@ -89,14 +89,14 @@ const Services = () => {
       bulletPoints: [
         "Creación web profesional",
         "Diseño UI/UX personalizado",
-        "Mantenimiento y asistencia continúa",
+        "Mantenimiento y optimización continúa",
       ],
     },
     {
       title: "Anuncios y estrategias organicas",
       image: assets.Advertisement,
       bulletPoints: [
-        "Producción de contenidos persuasivos",
+        "Producción de contenidos llamativos",
         "Inboud Marketing",
         "Seguimiento de métricas",
       ],
@@ -106,8 +106,8 @@ const Services = () => {
       image: assets.Strategies,
       bulletPoints: [
         "Auditoría SEO",
-        "Monitoreo y optimización constante",
-        "Mejora de página ON y OFF",
+        "Monitoreo y asistencia constante",
+        "Optimizacón on-page y off-page",
       ],
     },
   ];
@@ -162,14 +162,14 @@ const About = () => {
       image: assets.Local,
       higlighted: false,
       description:
-        "Estamos en el mismo país que tú. Como empresa local, podrás localizarnos cuando nos necesites.",
+        "Estamos en el mismo país que tú. Como empresa local, podrás contactarnos cuando nos necesites.",
     },
     {
       title: "RESULTADOS",
       image: assets.Results,
       higlighted: true,
       description:
-        "Priorizamos tus resultados por encima de todo, sólo ganamos si tú ganas.Compartiremos el riesgo contigo.",
+        "Priorizamos tus resultados por encima de todo, si tú ganas nosotros ganamos.",
     },
     {
       title: "ESPECIALIZADOS",
