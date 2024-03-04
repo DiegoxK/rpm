@@ -19,7 +19,6 @@ const Section = ({
       id={id}
       className={cn(
         "relative flex items-center justify-center overflow-ellipsis",
-        hero ? "min-h-[calc(100vh-160px)]" : "min-h-screen",
         className,
       )}
     >
@@ -30,7 +29,7 @@ const Section = ({
 
 export default function Home() {
   return (
-    <main className="container flex flex-col gap-12 overflow-hidden py-10 md:overflow-visible md:px-20">
+    <main className="container flex flex-col gap-52 overflow-hidden pb-52 pt-16 md:overflow-visible md:px-20">
       <Hero />
       <Services />
       <About />
