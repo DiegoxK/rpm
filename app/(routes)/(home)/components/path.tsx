@@ -1,3 +1,7 @@
 export default function Path() {
-  return <section>Path</section>;
+  return (
+    <section>
+      <div>Path</div>
+    </section>
+  );
 }
