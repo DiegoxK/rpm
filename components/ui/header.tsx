@@ -9,7 +9,6 @@ export default function Header() {
         <div className="flex w-full items-center justify-between">
           <MainNav />
           <MobileNav />
-          <Button className="rounded-full px-12 font-semibold">Contacto</Button>
         </div>
       </div>
     </header>

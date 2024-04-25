@@ -5,19 +5,21 @@ import { usePathname } from "next/navigation";
 import { assets } from "@/config/site";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "../button";
 
 export default function MainNav() {
   return (
-    <div className="mr-4 hidden md:flex">
-      {/* <NavLink href="/" className="me-6">
+    <div className="mr-4 hidden w-full justify-between md:flex">
+      <NavLink href="/" className="me-6">
         <Image src={assets.logo} width={100} height={100} alt="logo" priority />
-      </NavLink> */}
+      </NavLink>
       <nav className="flex items-center space-x-6 font-semibold uppercase">
         {siteConfig.navigation.map((link) => (
           <NavLink key={link.url} href={link.url}>
             {link.name}
           </NavLink>
         ))}
+        <Button className="rounded-full px-12 font-semibold">Contacto</Button>
       </nav>
     </div>
   );
@@ -43,9 +45,9 @@ export function NavLink({
     <Link
       className={cn(
         "hover:text-foreground/80 transition-colors",
-        pathname === href
-          ? "font-bold text-primary underline decoration-4 underline-offset-4"
-          : "text-foreground/60",
+        // pathname === href
+        //   ? "font-bold text-primary underline decoration-4 underline-offset-4"
+        //   : "text-foreground/60",
         className,
       )}
       onClick={toggleOpen !== undefined ? () => toggleOpen(false) : undefined}

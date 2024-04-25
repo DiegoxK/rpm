@@ -29,7 +29,7 @@ export const siteConfig: SiteConfig = {
       url: "/services",
     },
     {
-      name: "Planes",
+      name: "Nosotros",
       url: "/plans",
     },
   ],
