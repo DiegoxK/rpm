@@ -7,7 +7,7 @@ import Qualities from "./components/qualities";
 export default function LandPage() {
   return (
     <>
-      <main className="*:container">
+      <main>
         <Hero />
         <Path />
         <Services />

@@ -11,7 +11,7 @@ export default function MainNav() {
   return (
     <div className="hidden w-full justify-between md:flex">
       <NavLink href="/">
-        <Image src={assets.logo} width={145} height={145} alt="logo" priority />
+        <Image src={assets.Logo} width={135} height={135} alt="logo" priority />
       </NavLink>
       <nav className="flex items-center space-x-6 uppercase">
         {siteConfig.navigation.map((link) => (

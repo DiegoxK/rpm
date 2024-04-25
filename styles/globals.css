@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  outline: 2px solid rgb(63, 152, 241);
-}
+/* * {
+  outline: 2px solid rgb(202, 63, 241);
+} */
 
 @layer base {
   :root {
@@ -18,7 +18,7 @@
     --popover-foreground: #000000;
 
     --primary: #0f85da;
-    --primary-foreground: #000000;
+    --primary-foreground: #ffffff;
 
     --secondary: #ef43cf;
     --secondary-foreground: #000000;

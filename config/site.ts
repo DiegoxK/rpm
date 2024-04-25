@@ -1,4 +1,5 @@
-import logo from "@/public/RPMLogo.svg";
+import Logo from "@/public/RPMLogo.svg";
+import HeroBG from "@/public/Home/HeroBG.svg";
 
 type NavigationItem = {
   name: string;
@@ -27,5 +28,6 @@ export const siteConfig: SiteConfig = {
 };
 
 export const assets = {
-  logo,
+  Logo,
+  HeroBG,
 };
