@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div className="relative flex h-[calc(100vh-57px)] items-center">
       <Image
-        className="absolute bottom-0 w-full"
+        className="absolute bottom-0 z-[-1] w-full"
         alt="Hero Background"
         src={assets.HeroBG}
       />
