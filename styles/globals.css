@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  /* outline: 2px solid rgb(63, 152, 241); */
+}
+
 @layer base {
   :root {
     --background: #ffffff;
@@ -28,10 +32,10 @@
     --destructive: #ef4444;
     --destructive-foreground: #fafafa;
 
-    --border: #042549;
-    --input: #042549;
+    --border: #0f85da;
+    --input: #0f85da;
 
-    --ring: #042549;
+    --ring: #0f85da;
     --radius: 0.3rem;
   }
 }
