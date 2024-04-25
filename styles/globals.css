@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  /* outline: 2px solid rgb(63, 152, 241); */
+  outline: 2px solid rgb(63, 152, 241);
 }
 
 @layer base {
