@@ -1,3 +1,5 @@
+import Section from "@/components/ui/section";
+import Title from "@/components/ui/section";
 import { assets } from "@/config/site";
 import Image from "next/image";
 
@@ -55,9 +57,8 @@ export default function Path({ paths }: PathProps) {
   }
 
   return (
-    <section className="container my-48 flex flex-col items-center justify-center gap-36 px-36 text-center">
-      <h2 className="text-4xl font-medium">¿PORQUE DEBERIAS ELEGIRNOS?</h2>
-      <div className="grid grid-cols-11">{layout}</div>
-    </section>
+    <Section className="my-36" title="TU CAMINO AL ÉXITO">
+      <div className="grid grid-cols-11 text-center">{layout}</div>
+    </Section>
   );
 }

@@ -1,6 +1,6 @@
 import { assets } from "@/config/site";
 
-import Services from "../services/page";
+import Services from "./components/services";
 import ContactForm from "./components/contact-form";
 import Hero from "./components/hero";
 import Path from "./components/path";
@@ -34,12 +34,51 @@ export default function LandPage() {
     },
   ];
 
+  const services = [
+    {
+      img: assets.services.ServiceWeb,
+      icon: assets.services.WebIcon,
+      title: "Desarrollo Web",
+      description:
+        "Sé visible 24/7,  gana credibilidad, capta clientes y potencia tus ventas.",
+      bulletPoints: [
+        "Desarrollo web profesional.",
+        "Diseño UI/UX personalizado.",
+        "Mantenimiento y soporte continuo.",
+      ],
+    },
+    {
+      img: assets.services.ServiceContent,
+      icon: assets.services.ContentIcon,
+      title: "ANUNCIOS Y PRODUCCIÓN DE CONTENIDOS",
+      description:
+        "Impulsa tu marca con anuncios llamativos y contenidos de calidad. Atraemos y fidelizamos a tus clientes",
+      bulletPoints: [
+        "Creación de anuncios.",
+        "Crecimiento órganico en redes sociales.",
+        "Inboud Marketing.",
+      ],
+    },
+    {
+      img: assets.services.ServiceSeo,
+      icon: assets.services.SeoIcon,
+      title: "ESTRATEGIAS DE POSICIONAMIENTO SEO",
+      description:
+        "Aumentamos tu visibilidad y tráfico web, mejoramos conversiones y ROI.",
+      bulletPoints: [
+        "Auditoría SEO.",
+        "Optimización ON-PAGE y OFF-PAGE.",
+        "Monitoreo y análisis constante.",
+      ],
+    },
+  ];
+
   return (
     <>
       <main>
         <Hero />
         <Path paths={paths} />
-        <Services />
+        <Services services={services} />
         <Qualities />
       </main>
       <ContactForm />

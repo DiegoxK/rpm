@@ -1,14 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
-* {
+
+/* * {
   outline: 2px solid rgb(202, 63, 241);
 } */
 
 @layer base {
   :root {
-    --background: #ffffff;
+    --background: #f9fbfa;
     --foreground: #000000;
 
     --card: #000000;
