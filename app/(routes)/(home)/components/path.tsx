@@ -55,7 +55,7 @@ export default function Path({ paths }: PathProps) {
   }
 
   return (
-    <section className="container my-48 flex flex-col items-center justify-center gap-36 text-center">
+    <section className="container my-48 flex flex-col items-center justify-center gap-36 px-36 text-center">
       <h2 className="text-4xl font-medium">¿PORQUE DEBERIAS ELEGIRNOS?</h2>
       <div className="grid grid-cols-11">{layout}</div>
     </section>

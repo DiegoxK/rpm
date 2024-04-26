@@ -9,7 +9,7 @@ export default function LandPage() {
   const paths = [
     {
       icon: assets.paths.Contacto,
-      title: "Investigación",
+      title: "Contacto",
       description:
         "Establecemos un vínculo directo contigo para comprender tus necesidades, metas y visión.",
     },
