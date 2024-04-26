@@ -38,6 +38,7 @@ export default function LandPage() {
     {
       img: assets.services.ServiceWeb,
       icon: assets.services.WebIcon,
+      decor: assets.services.Decor1,
       title: "Desarrollo Web",
       description:
         "Sé visible 24/7,  gana credibilidad, capta clientes y potencia tus ventas.",
@@ -50,6 +51,7 @@ export default function LandPage() {
     {
       img: assets.services.ServiceContent,
       icon: assets.services.ContentIcon,
+      decor: assets.services.Decor2,
       title: "ANUNCIOS Y PRODUCCIÓN DE CONTENIDOS",
       description:
         "Impulsa tu marca con anuncios llamativos y contenidos de calidad. Atraemos y fidelizamos a tus clientes",
@@ -62,6 +64,7 @@ export default function LandPage() {
     {
       img: assets.services.ServiceSeo,
       icon: assets.services.SeoIcon,
+      decor: assets.services.Decor3,
       title: "ESTRATEGIAS DE POSICIONAMIENTO SEO",
       description:
         "Aumentamos tu visibilidad y tráfico web, mejoramos conversiones y ROI.",

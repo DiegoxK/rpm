@@ -1,5 +1,8 @@
+/* eslint-disable jsx-a11y/alt-text */
+
 import Section from "@/components/ui/section";
 import { Separator } from "@/components/ui/separator";
+import { assets } from "@/config/site";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +10,7 @@ import Link from "next/link";
 interface Service {
   img: string;
   icon: string;
+  decor: string;
   title: string;
   description: string;
   bulletPoints: string[];
@@ -21,12 +25,18 @@ export default function Services({ services }: ServicesProps) {
     img,
     icon,
     title,
+    decor,
     description,
     bulletPoints,
   }: Service) => {
     return (
       <>
-        <div className="mx-20 grid grid-cols-2 items-center gap-20">
+        <div className="relative mx-20 grid grid-cols-2 items-center gap-20">
+          <Image
+            className="absolute right-[-8%] top-[-15%]"
+            src={decor}
+            alt="decorator"
+          />
           <div className="flex justify-center">
             <Image src={img} alt="WebService Image" />
           </div>
@@ -48,6 +58,12 @@ export default function Services({ services }: ServicesProps) {
               <p>Conoce más</p> <ArrowRight size={20} />
             </Link>
           </div>
+          <Image
+            className="absolute left-[-8%] top-[-15%]"
+            style={{ transform: "scaleX(-1)" }}
+            src={decor}
+            alt="decorator"
+          />
         </div>
       </>
     );
@@ -56,7 +72,7 @@ export default function Services({ services }: ServicesProps) {
   return (
     <>
       <div className="h-6 bg-primary" />
-      <Section className="mb-36" title="NUESTROS SERVICIOS">
+      <Section className="my-36" title="NUESTROS SERVICIOS">
         <div className="space-y-32">
           {services.map((service, index) => (
             <ServiceCard key={index} {...service} />

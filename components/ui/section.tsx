@@ -16,7 +16,7 @@ export default function Section({ title, children, className }: SectionProps) {
       )}
     >
       <h2 className="text-center text-4xl font-medium">{title}</h2>
-      <Separator className="mb-10" decorative />
+      <Separator className="mb-20" decorative />
       {children}
     </section>
   );
