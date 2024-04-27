@@ -18,6 +18,12 @@ import ServiceSeo from "@/public/home/services/Service-SEO.svg";
 import ServiceWeb from "@/public/home/services/Service-Web.svg";
 import WebIcon from "@/public/home/services/Web-Icon.svg";
 
+import Comunication from "@/public/home/qualities/Comunication.svg";
+import Efficiency from "@/public/home/qualities/Efficiency.svg";
+import Guarantee from "@/public/home/qualities/Guarantee.svg";
+import Local from "@/public/home/qualities/Local.svg";
+import Specialized from "@/public/home/qualities/Specialized.svg";
+
 type NavigationItem = {
   name: string;
   url: string;
@@ -65,5 +71,12 @@ export const assets = {
     ServiceSeo,
     ServiceWeb,
     WebIcon,
+  },
+  qualities: {
+    Comunication,
+    Efficiency,
+    Guarantee,
+    Local,
+    Specialized,
   },
 };

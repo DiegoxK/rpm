@@ -76,13 +76,46 @@ export default function LandPage() {
     },
   ];
 
+  const qualities = [
+    {
+      icon: assets.qualities.Comunication,
+      title: "Comunicación",
+      description:
+        "Establecemos un vínculo directo contigo para comprender tus necesidades, metas y visión.",
+    },
+    {
+      icon: assets.qualities.Efficiency,
+      title: "Eficiencia",
+      description:
+        "Analizamos tu mercado, competencia y audiencia objetivo para trazar estrategias efectivas.",
+    },
+    {
+      icon: assets.qualities.Guarantee,
+      title: "Garantía",
+      description:
+        "Llevamos a cabo la ejecución de una estrategia personalizada que se alinee con tus objetivos.",
+    },
+    {
+      icon: assets.qualities.Local,
+      title: "Local",
+      description:
+        "Garantizamos que alcances los resultados deseados y obtengas el éxito que buscas en tu empresa.",
+    },
+    {
+      icon: assets.qualities.Specialized,
+      title: "Especializados",
+      description:
+        "Garantizamos que alcances los resultados deseados y obtengas el éxito que buscas en tu empresa.",
+    },
+  ];
+
   return (
     <>
       <main>
         <Hero />
         <Path paths={paths} />
         <Services services={services} />
-        <Qualities />
+        <Qualities qualities={qualities} />
       </main>
       <ContactForm />
     </>

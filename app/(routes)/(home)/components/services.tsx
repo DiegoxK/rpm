@@ -7,47 +7,40 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-interface Service {
+type Service = {
   img: string;
   icon: string;
   decor: string;
   title: string;
   description: string;
   bulletPoints: string[];
-}
+};
 
 interface ServicesProps {
   services: Service[];
 }
 
 export default function Services({ services }: ServicesProps) {
-  const ServiceCard = ({
-    img,
-    icon,
-    title,
-    decor,
-    description,
-    bulletPoints,
-  }: Service) => {
+  const ServiceCard = ({ service }: { service: Service }) => {
     return (
       <>
         <div className="relative mx-20 grid grid-cols-2 items-center gap-20">
           <Image
-            className="absolute right-[-8%] top-[-15%]"
-            src={decor}
+            className="absolute right-[-12%] top-[-15%]"
+            src={service.decor}
             alt="decorator"
           />
           <div className="flex justify-center">
-            <Image src={img} alt="WebService Image" />
+            <Image src={service.img} alt="WebService Image" />
           </div>
           <div className="space-y-3">
             <div className="flex gap-4">
-              <Image src={icon} alt="Web Icon" />
-              <h3 className="text-xl font-semibold">{title}</h3>
+              <Image src={service.icon} alt="Web Icon" />
+              <h3 className="text-xl font-semibold">{service.title}</h3>
             </div>
-            <p>{description}</p>
+            <p>{service.description}</p>
             <ol className="ms-4 list-disc font-medium">
-              {bulletPoints.map((point, index) => (
+              {service.bulletPoints.map((point, index) => (
                 <li key={index}>{point}</li>
               ))}
             </ol>
@@ -59,9 +52,9 @@ export default function Services({ services }: ServicesProps) {
             </Link>
           </div>
           <Image
-            className="absolute left-[-8%] top-[-15%]"
+            className="absolute left-[-12%] top-[-15%]"
             style={{ transform: "scaleX(-1)" }}
-            src={decor}
+            src={service.decor}
             alt="decorator"
           />
         </div>
@@ -75,7 +68,7 @@ export default function Services({ services }: ServicesProps) {
       <Section className="my-36" title="NUESTROS SERVICIOS">
         <div className="space-y-32">
           {services.map((service, index) => (
-            <ServiceCard key={index} {...service} />
+            <ServiceCard key={index} service={service} />
           ))}
         </div>
       </Section>
