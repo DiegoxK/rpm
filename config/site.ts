@@ -1,4 +1,5 @@
 import Logo from "@/public/RPMLogo.svg";
+import WhiteLogo from "@/public/WhiteLogo.svg";
 import HeroBG from "@/public/home/HeroBG.svg";
 
 import Contacto from "@/public/home/path/contacto.svg";
@@ -26,6 +27,9 @@ import Specialized from "@/public/home/qualities/Specialized.svg";
 
 import ContactBg from "@/public/home/contact/Contact-BG.svg";
 import ContactImage from "@/public/home/contact/Contact-Image.svg";
+
+import Twitter from "@/public/footer/Twitter.svg";
+import Facebook from "@/public/footer/Facebook.svg";
 
 type NavigationItem = {
   name: string;
@@ -55,6 +59,7 @@ export const siteConfig: SiteConfig = {
 
 export const assets = {
   Logo,
+  WhiteLogo,
   HeroBG,
   paths: {
     Contacto,
@@ -85,5 +90,9 @@ export const assets = {
   contact: {
     ContactBg,
     ContactImage,
+  },
+  footer: {
+    Twitter,
+    Facebook,
   },
 };
