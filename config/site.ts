@@ -52,7 +52,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       name: "Nosotros",
-      url: "/plans",
+      url: "/about",
     },
   ],
 };
