@@ -25,15 +25,15 @@ export default function Qualities({ qualities }: QualitiesProps) {
   };
   return (
     <Section title="¿POR QUÉ DEBERÍAS ELEGIRNOS?">
-      <div className="space-y-24">
-        <div className="grid grid-cols-3 gap-10">
+      <div className="space-y-12 lg:space-y-24">
+        <div className="grid gap-10 lg:grid-cols-3">
           {qualities
             .map((quality, index) => (
               <QualityCard key={index} quality={quality} />
             ))
             .slice(0, 3)}
         </div>
-        <div className="grid grid-cols-2 gap-10 px-44">
+        <div className="grid gap-10 lg:grid-cols-2 lg:px-44">
           {qualities
             .map((quality, index) => (
               <QualityCard key={index} quality={quality} />

@@ -24,9 +24,9 @@ export default function Services({ services }: ServicesProps) {
   const ServiceCard = ({ service }: { service: Service }) => {
     return (
       <>
-        <div className="relative mx-20 grid grid-cols-2 items-center gap-20">
+        <div className="relative grid items-center gap-20 lg:mx-20 lg:grid-cols-2">
           <Image
-            className="absolute right-[-12%] top-[-15%]"
+            className="absolute right-[-12%] top-[-15%] hidden lg:block"
             src={service.decor}
             alt="decorator"
           />
@@ -52,7 +52,7 @@ export default function Services({ services }: ServicesProps) {
             </Link>
           </div>
           <Image
-            className="absolute left-[-12%] top-[-15%]"
+            className="absolute left-[-12%] top-[-15%] hidden lg:block"
             style={{ transform: "scaleX(-1)" }}
             src={service.decor}
             alt="decorator"

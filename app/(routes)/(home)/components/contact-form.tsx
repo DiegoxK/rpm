@@ -15,17 +15,17 @@ export default function ContactForm() {
 
       <div className="bg-primary text-white">
         <div className="container space-y-3">
-          <div className="grid grid-cols-3">
+          <div className="grid lg:grid-cols-3">
             <div className="relative">
               <Image
-                className="absolute bottom-0 right-[16%]"
+                className="absolute bottom-0 right-[16%] hidden lg:block"
                 alt="Contact Image"
                 src={assets.contact.ContactImage}
               />
             </div>
-            <div className="col-span-2 space-y-4">
+            <div className="col-span-2 mt-10 space-y-4 sm:mt-0">
               <h3 className="text-4xl font-bold">Contactanos</h3>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid gap-3 sm:grid-cols-2">
                 <Input placeholder="Tu nombre*" />
                 <Input placeholder="Correo*" />
                 <Input placeholder="Nombre de la empresa*" />

@@ -11,7 +11,7 @@ export default function Section({ title, children, className }: SectionProps) {
   return (
     <section
       className={cn(
-        "container my-20 flex flex-col items-center justify-center gap-10 px-36",
+        "container my-20 flex flex-col items-center justify-center gap-10 md:px-36",
         className,
       )}
     >

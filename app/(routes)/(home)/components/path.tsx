@@ -42,7 +42,7 @@ export default function Path({ paths }: PathProps) {
     } else {
       const Arrow = (arrow: any, alt: string) => {
         return (
-          <div key={i} className="mt-4 flex flex-col items-center">
+          <div key={i} className="mt-4 hidden flex-col items-center lg:flex">
             <Image src={arrow} alt={alt} />
           </div>
         );
@@ -58,7 +58,9 @@ export default function Path({ paths }: PathProps) {
 
   return (
     <Section className="my-36" title="TU CAMINO AL ÉXITO">
-      <div className="grid grid-cols-11 text-center">{layout}</div>
+      <div className="grid gap-10 text-center lg:grid-cols-11 lg:gap-0">
+        {layout}
+      </div>
     </Section>
   );
 }

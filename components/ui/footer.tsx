@@ -7,9 +7,9 @@ export default function Footer() {
     <div className="bg-primary text-white">
       <div className="container pt-10">
         <Image src={assets.WhiteLogo} alt="logo" />
-        <div className="grid grid-cols-3 py-6">
+        <div className="grid gap-5 py-6 sm:grid-cols-3 sm:gap-0">
           <div className="col-span-2 flex flex-col gap-2">
-            <h4>
+            <h4 className="hidden sm:block">
               R E S U L T A D O S P U B L I C I T A R I O S M E D E L L Í N
             </h4>
             <p>
@@ -20,14 +20,14 @@ export default function Footer() {
               </span>
             </p>
           </div>
-          <div className="text-right">
+          <div className="sm:text-right">
             <h4 className="font-bold">CONTACTO</h4>
             <p>Teléfono: 3506294428</p>
             <p>Medellín, Colombia</p>
           </div>
         </div>
         <Separator className="bg-white" />
-        <div className="flex justify-between py-6">
+        <div className="flex flex-col justify-between gap-2 py-6 sm:flex-row sm:gap-0">
           <p className="font-light">Copyright @RPM 2024 All Rights Reversed</p>
           <div className="flex gap-2">
             <p>Siguenos</p>
