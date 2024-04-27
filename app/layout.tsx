@@ -1,9 +1,13 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
+
 import "@/styles/globals.css";
 import { MontserratFont } from "@/components/ui/fonts";
 import { Metadata } from "next";
 import { cn } from "@/lib/utils";
 
 import Header from "@/components/ui/header";
+import Footer from "@/components/ui/footer";
 
 export const metadata: Metadata = {
   title: "RPM: Bienvenido!",
@@ -24,11 +28,13 @@ export default function RootLayout({
         )}
       >
         <Header />
+        {/* Metricool Tracker */}
         <img
           className="hidden"
           src="https://tracker.metricool.com/c3po.jpg?hash=a892bac29f6bda6ed0763d28ba9fb14e"
         />
         {children}
+        <Footer />
       </body>
     </html>
   );

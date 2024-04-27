@@ -25,7 +25,7 @@ export default function MobileNav() {
       </SheetTrigger>
       <SheetContent side="left">
         <NavLink href="/" toggleOpen={setOpen}>
-          <Image src={assets.logo} width={100} height={100} alt="logo" />
+          <Image src={assets.Logo} width={100} height={100} alt="logo" />
         </NavLink>
         <ScrollArea className="my-4 h-[calc(100vh-6rem)] pl-6">
           <nav className="flex flex-col space-y-3">

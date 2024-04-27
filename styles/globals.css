@@ -2,36 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* * {
+  outline: 2px solid rgb(202, 63, 241);
+} */
+
 @layer base {
   :root {
-    --background: #1b1b1b;
-    --foreground: #ffffff;
+    --background: #f9fbfa;
+    --foreground: #000000;
 
     --card: #000000;
-    --card-foreground: #ffffff;
+    --card-foreground: #000000;
 
-    --popover: #000000;
-    --popover-foreground: #ffffff;
+    --popover: #ffffff;
+    --popover-foreground: #000000;
 
-    --primary: #38b6ff;
-    --primary-foreground: #000000;
+    --primary: #0f85da;
+    --primary-foreground: #ffffff;
 
-    --secondary: #ef43cf;
-    --secondary-foreground: #ffffff;
+    --form: #0c6cb0;
+    --form-foreground: #e7e7e7;
+
+    --secondary: #ffffff;
+    --secondary-foreground: #406cdc;
 
     --muted: #f4f4f5;
     --muted-foreground: #71717a;
 
-    --accent: #000000;
-    --accent-foreground: #ffffff;
+    --accent: #042549;
+    --accent-foreground: #fdfdfd;
 
     --destructive: #ef4444;
     --destructive-foreground: #fafafa;
 
-    --border: #151515;
-    --input: #2f2f2f;
+    --border: #0f85da;
+    --input: #0f85da;
 
-    --ring: #3e3232;
+    --ring: #0f85da;
     --radius: 0.3rem;
   }
 }
@@ -40,53 +47,4 @@
   * {
     @apply border-border;
   }
-}
-
-#hero::before,
-#about::before,
-#services::before {
-  z-index: -1;
-  position: absolute;
-  content: "";
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background-color: #bb6ce6da;
-  filter: blur(140px);
-}
-
-#hero::before {
-  top: calc(50% - 150px);
-  left: calc(25% - 150px);
-}
-
-#services::before {
-  top: calc(50% - 150px);
-  left: calc(50% - 150px);
-}
-
-#about::before {
-  top: calc(50% - 150px);
-  right: calc(25% - 150px);
-}
-
-#contact::before {
-  z-index: -1;
-  position: absolute;
-  content: "";
-
-  top: calc(70% - 250px);
-  left: calc(50% - 250px);
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  box-shadow:
-    inset 0 0 50px #fff,
-    inset 20px 0 80px #f0f,
-    inset -20px 0 80px #0ff,
-    inset 20px 0 500px #f0f,
-    inset -20px 0 500px #0ff,
-    0 0 50px #fff,
-    -10px 0 80px #f0f,
-    10px 0 80px #0ff;
 }
