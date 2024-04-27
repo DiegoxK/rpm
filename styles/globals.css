@@ -20,8 +20,11 @@
     --primary: #0f85da;
     --primary-foreground: #ffffff;
 
-    --secondary: #ef43cf;
-    --secondary-foreground: #000000;
+    --form: #0c6cb0;
+    --form-foreground: #e7e7e7;
+
+    --secondary: #ffffff;
+    --secondary-foreground: #406cdc;
 
     --muted: #f4f4f5;
     --muted-foreground: #71717a;

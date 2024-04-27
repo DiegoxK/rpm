@@ -24,6 +24,10 @@ const config = {
         ring: "var(--ring)",
         background: "var(--background)",
         foreground: "var(--foreground)",
+        form: {
+          DEFAULT: "var(--form)",
+          foreground: "var(--form-foreground)",
+        },
         primary: {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",

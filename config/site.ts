@@ -24,6 +24,9 @@ import Guarantee from "@/public/home/qualities/Guarantee.svg";
 import Local from "@/public/home/qualities/Local.svg";
 import Specialized from "@/public/home/qualities/Specialized.svg";
 
+import ContactBg from "@/public/home/contact/Contact-BG.svg";
+import ContactImage from "@/public/home/contact/Contact-Image.svg";
+
 type NavigationItem = {
   name: string;
   url: string;
@@ -78,5 +81,9 @@ export const assets = {
     Guarantee,
     Local,
     Specialized,
+  },
+  contact: {
+    ContactBg,
+    ContactImage,
   },
 };
