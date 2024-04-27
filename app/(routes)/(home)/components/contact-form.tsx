@@ -8,7 +8,7 @@ export default function ContactForm() {
   return (
     <>
       <Image
-        className="mt-44 w-screen"
+        className="mt-52 w-screen"
         alt="Contact wave"
         src={assets.contact.ContactBg}
       />
