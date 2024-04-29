@@ -3,6 +3,8 @@
 
 import "@/styles/globals.css";
 import { MontserratFont } from "@/components/ui/fonts";
+import { Toaster } from "@/components/ui/toaster";
+
 import { Metadata } from "next";
 import { cn } from "@/lib/utils";
 
@@ -35,6 +37,7 @@ export default function RootLayout({
         />
         {children}
         <Footer />
+        <Toaster />
       </body>
     </html>
   );

@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { assets } from "@/config/site";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useToast } from "@/components/ui/use-toast";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -14,19 +15,51 @@ import {
   FormControl,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 
 const formSchema = z.object({
-  fullname: z.string().min(2).max(50),
-  email: z.string().email(),
-  company: z.string().min(2).max(50),
-  phone: z.string().min(2).max(50),
-  message: z.string().min(2).max(500),
+  fullname: z
+    .string()
+    .min(1, {
+      message: "El nombre debe tener al menos 1 caracteres",
+    })
+    .max(50, {
+      message: "El nombre debe tener menos de 50 caracteres",
+    }),
+  email: z.string().email({
+    message: "Ingresa un correo electrónico válido",
+  }),
+  company: z
+    .string()
+    .min(1, {
+      message: "El nombre de la empresa debe tener al menos 1 caracteres",
+    })
+    .max(50, {
+      message: "El nombre de la empresa debe tener menos de 50 caracteres",
+    }),
+  phone: z
+    .string()
+    .min(1, {
+      message: "El teléfono debe tener al menos 1 caracteres",
+    })
+    .max(50, {
+      message: "El teléfono debe tener menos de 50 caracteres",
+    }),
+
+  message: z
+    .string()
+    .min(1, {
+      message: "El mensaje debe tener al menos 1 caracteres",
+    })
+    .max(500, {
+      message: "El mensaje debe tener menos de 500 caracteres",
+    }),
 });
 
 export default function ContactForm() {
+  const { toast } = useToast();
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -39,6 +72,18 @@ export default function ContactForm() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
+    toast({
+      title: "Mensaje enviado",
+      description: (
+        <div>
+          {Object.entries(values).map(([key, value]) => (
+            <div key={key}>
+              <strong>{key}</strong>: {value}
+            </div>
+          ))}
+        </div>
+      ),
+    });
     console.log(values);
   }
 
@@ -75,7 +120,7 @@ export default function ContactForm() {
                         <FormControl>
                           <Input placeholder="Tu nombre completo*" {...field} />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-white" />
                       </FormItem>
                     )}
                   />
@@ -87,7 +132,7 @@ export default function ContactForm() {
                         <FormControl>
                           <Input placeholder="Correo*" {...field} />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-white" />
                       </FormItem>
                     )}
                   />
@@ -102,7 +147,7 @@ export default function ContactForm() {
                             {...field}
                           />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-white" />
                       </FormItem>
                     )}
                   />
@@ -114,7 +159,7 @@ export default function ContactForm() {
                         <FormControl>
                           <Input placeholder="Telefono*" {...field} />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-white" />
                       </FormItem>
                     )}
                   />
@@ -129,7 +174,7 @@ export default function ContactForm() {
                   <FormControl>
                     <Textarea placeholder="Tu mensaje*" {...field} />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-white" />
                 </FormItem>
               )}
             />
