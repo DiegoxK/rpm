@@ -80,7 +80,8 @@ export default function LandPage() {
     {
       icon: assets.qualities.Comunication,
       title: "Somos Locales",
-      description: "",
+      description:
+        "Contamos con conocimiento profundo de la publicidad en Colombia para brindarte la mejor estrategia.",
     },
     {
       icon: assets.qualities.Efficiency,
