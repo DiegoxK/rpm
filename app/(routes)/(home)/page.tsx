@@ -81,13 +81,13 @@ export default function LandPage() {
       icon: assets.qualities.Comunication,
       title: "SOMOS LOCALES",
       description:
-        "Entendemos como funciona la publicidad en Colombia, te daremos estrategías que conecten asertivamente con tu público.",
+        "Entendemos como funciona la publicidad en Colombia, te daremos estrategías que conecten con tu público.",
     },
     {
       icon: assets.qualities.Efficiency,
       title: "GARANTÍA",
       description:
-        "Te garantizamos un servicio de calidad y nos aseguraremos de que tengas los resultados deseados.",
+        "Te garantizamos un servicio de calidad excepcional y nos aseguraremos de que tengas los resultados deseados.",
     },
     {
       icon: assets.qualities.Guarantee,
