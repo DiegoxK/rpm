@@ -79,33 +79,33 @@ export default function LandPage() {
   const qualities = [
     {
       icon: assets.qualities.Comunication,
-      title: "Comunicación",
+      title: "SOMOS LOCALES",
       description:
-        "Establecemos un vínculo directo contigo para comprender tus necesidades, metas y visión.",
+        "Entendemos como funciona la publicidad en Colombia, te daremos estrategías que conecten asertivamente con tu público.",
     },
     {
       icon: assets.qualities.Efficiency,
-      title: "Eficiencia",
+      title: "GARANTÍA",
       description:
-        "Analizamos tu mercado, competencia y audiencia objetivo para trazar estrategias efectivas.",
+        "Te garantizamos un servicio de calidad y nos aseguraremos de que tengas los resultados deseados.",
     },
     {
       icon: assets.qualities.Guarantee,
-      title: "Garantía",
+      title: "COMUNICACIÓN EFECTIVA",
       description:
-        "Llevamos a cabo la ejecución de una estrategia personalizada que se alinee con tus objetivos.",
+        "Podrás comunicarte rápidamente con nuestro personal, que te brindará una atención transparente, clara y concisa.",
     },
     {
       icon: assets.qualities.Local,
-      title: "Local",
+      title: "EFICIENCIA COMPETITIVA",
       description:
-        "Garantizamos que alcances los resultados deseados y obtengas el éxito que buscas en tu empresa.",
+        "Nuestra filosofía de trabajo se basa en la productividad. Te entregaremos los mejores resultados en el menor tiempo posible.",
     },
     {
       icon: assets.qualities.Specialized,
-      title: "Especializados",
+      title: "ESTAMOS ESPECIALIZADOS",
       description:
-        "Garantizamos que alcances los resultados deseados y obtengas el éxito que buscas en tu empresa.",
+        "Nuestro equipo combina la maestría en diseño, la estrategia de marketing y la excelencia en programación para tu crecimiento.",
     },
   ];
 

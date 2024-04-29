@@ -19,7 +19,9 @@ export default function Hero() {
           Creamos el ecosistema digital de tu negocio, hacemos marketing
           efectivo y multiplicamos tu exposición online.
         </p>
-        <Button className="rounded-full px-12 xl:px-48">Si quiero eso</Button>
+        <Button className="rounded-full px-12 font-semibold uppercase xl:px-48">
+          Si quiero eso!
+        </Button>
       </section>
     </div>
   );
