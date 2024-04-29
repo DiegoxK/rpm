@@ -20,7 +20,7 @@ export default function Hero() {
           efectivo y multiplicamos tu exposición online.
         </p>
         <Button className="rounded-full px-12 font-semibold uppercase xl:px-48">
-          Si quiero eso!
+          ¡Sí, quiero eso!
         </Button>
       </section>
     </div>
