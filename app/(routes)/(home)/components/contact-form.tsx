@@ -1,4 +1,5 @@
 "use client";
+import emailjs from "@emailjs/browser";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,6 +18,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
+import { BaseSyntheticEvent } from "react";
 
 const formSchema = z.object({
   fullname: z
@@ -71,20 +73,45 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(
+    values: z.infer<typeof formSchema>,
+    event: BaseSyntheticEvent | undefined,
+  ) {
+    if (!event) return;
+
     toast({
-      title: "Mensaje enviado",
-      description: (
-        <div>
-          {Object.entries(values).map(([key, value]) => (
-            <div key={key}>
-              <strong>{key}</strong>: {value}
-            </div>
-          ))}
-        </div>
-      ),
+      title: "Enviando mensaje",
+      description: "Por favor espera un momento",
     });
-    console.log(values);
+
+    emailjs
+      .sendForm(
+        "service_t2vhkxp",
+        "template_xxk4rmc",
+        event.target,
+        "57M3zsulQvtIl_HMj",
+      )
+      .then(() => {
+        toast({
+          title: "Mensaje enviado",
+          description: (
+            <div>
+              {Object.entries(values).map(([key, value]) => (
+                <div key={key}>
+                  <strong>{key}</strong>: {value}
+                </div>
+              ))}
+            </div>
+          ),
+        });
+      })
+      .catch(() => {
+        toast({
+          title: "Error al enviar el mensaje",
+          description: "Por favor intenta de nuevo",
+          variant: "destructive",
+        });
+      });
   }
 
   return (
