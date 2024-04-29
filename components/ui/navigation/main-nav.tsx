@@ -19,9 +19,11 @@ export default function MainNav() {
             {link.name}
           </NavLink>
         ))}
-        <Button variant="outline" className="px-12 font-semibold">
-          CONTACTO
-        </Button>
+        <Link href="#contact" passHref>
+          <Button variant="outline" className="px-12 font-semibold">
+            CONTACTO
+          </Button>
+        </Link>
       </nav>
     </div>
   );

@@ -72,7 +72,7 @@ export default function Services({ services }: ServicesProps) {
           ))}
         </div>
       </Section>
-      <div className="h-6 bg-primary" />
+      <div id="about" className="h-6 bg-primary" />
     </>
   );
 }
