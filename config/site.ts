@@ -48,7 +48,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       name: "Servicios",
-      url: "/services",
+      url: "#services",
     },
     {
       name: "Nosotros",

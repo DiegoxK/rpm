@@ -64,7 +64,7 @@ export default function Services({ services }: ServicesProps) {
 
   return (
     <>
-      <div className="h-6 bg-primary" />
+      <div id="services" className="h-6 bg-primary" />
       <Section className="my-36" title="NUESTROS SERVICIOS">
         <div className="space-y-32">
           {services.map((service, index) => (

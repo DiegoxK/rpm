@@ -10,7 +10,7 @@ export default function Hero() {
         alt="Hero Background"
         src={assets.HeroBG}
       />
-      <section className="container mb-[20%] space-y-5 text-center xl:px-96">
+      <section className="container mb-[20%] space-y-5 text-center sm:px-40 lg:px-60 xl:px-96">
         <p className="text-2xl">A TU ALCANCE</p>
         <h1 className="text-3xl font-bold">
           MÁS EXPOSICIÓN, MÁS CLIENTES, MÁS GANANCIAS.

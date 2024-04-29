@@ -39,7 +39,7 @@ export default function LandPage() {
       img: assets.services.ServiceWeb,
       icon: assets.services.WebIcon,
       decor: assets.services.Decor1,
-      title: "Desarrollo Web",
+      title: "DESARROLLO WEB",
       description:
         "Sé visible 24/7,  gana credibilidad, capta clientes y potencia tus ventas.",
       bulletPoints: [
