@@ -3,6 +3,7 @@
 
 import "@/styles/globals.css";
 import { MontserratFont } from "@/components/ui/fonts";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/toaster";
 
 import { Metadata } from "next";
@@ -29,6 +30,7 @@ export default function RootLayout({
           MontserratFont.className,
         )}
       >
+        <SpeedInsights />
         <Header />
         {/* Metricool Tracker */}
         <img
