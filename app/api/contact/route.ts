@@ -1,6 +1,7 @@
 import { ContactSchema } from "@/config/form-schema";
 import { transporter } from "@/lib/nodemailer";
 import { NextRequest, NextResponse } from "next/server";
+import { text } from "stream/consumers";
 
 export async function POST(req: NextRequest) {
   const formValues = await req.json();
@@ -35,11 +36,19 @@ export async function POST(req: NextRequest) {
     to: `contacto@resultadospublicitariosmedellin.com`,
     subject: `Mensaje de ${company}`,
     text: `
-<b>Nombre:</b> ${fullname}
-<b>Empresa:</b> ${company}
-<b>Teléfono:</b> ${phone}
-<b>Email:</b> ${email}
+Nombre: ${fullname}
+Empresa: ${company}
+Teléfono: ${phone}
+Email: ${email}
 
+${message}
+    `,
+    html: `
+<b>Nombre:</b> ${fullname} <br>
+<b>Empresa:</b> ${company} <br>
+<b>Teléfono:</b> ${phone} <br>
+<b>Email:</b> ${email} <br>
+<br>
 ${message}
     `,
   };
