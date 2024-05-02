@@ -1,5 +1,4 @@
 "use client";
-import emailjs from "@emailjs/browser";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,7 +7,8 @@ import { assets } from "@/config/site";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/components/ui/use-toast";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+
+import axios from "axios";
 
 import Image from "next/image";
 import {
@@ -18,52 +18,13 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { BaseSyntheticEvent } from "react";
-
-const formSchema = z.object({
-  fullname: z
-    .string()
-    .min(1, {
-      message: "El nombre debe tener al menos 1 caracteres",
-    })
-    .max(50, {
-      message: "El nombre debe tener menos de 50 caracteres",
-    }),
-  email: z.string().email({
-    message: "Ingresa un correo electrónico válido",
-  }),
-  company: z
-    .string()
-    .min(1, {
-      message: "El nombre de la empresa debe tener al menos 1 caracteres",
-    })
-    .max(50, {
-      message: "El nombre de la empresa debe tener menos de 50 caracteres",
-    }),
-  phone: z
-    .string()
-    .min(1, {
-      message: "El teléfono debe tener al menos 1 caracteres",
-    })
-    .max(50, {
-      message: "El teléfono debe tener menos de 50 caracteres",
-    }),
-
-  message: z
-    .string()
-    .min(1, {
-      message: "El mensaje debe tener al menos 1 caracteres",
-    })
-    .max(500, {
-      message: "El mensaje debe tener menos de 500 caracteres",
-    }),
-});
+import { ContactSchema, ContactType } from "@/config/form-schema";
 
 export default function ContactForm() {
   const { toast } = useToast();
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<ContactType>({
+    resolver: zodResolver(ContactSchema),
     defaultValues: {
       fullname: "",
       email: "",
@@ -73,47 +34,37 @@ export default function ContactForm() {
     },
   });
 
-  function onSubmit(
-    values: z.infer<typeof formSchema>,
-    event: BaseSyntheticEvent | undefined,
-  ) {
-    if (!event) return;
-
-    toast({
+  const onSubmit = (values: ContactType) => {
+    const toastAlert = toast({
       title: "Enviando mensaje",
       description: "Por favor espera un momento",
+      duration: 10000000,
     });
 
-    emailjs
-      .sendForm(
-        "service_t2vhkxp",
-        "template_xxk4rmc",
-        event.target,
-        "57M3zsulQvtIl_HMj",
-      )
-      .then(() => {
-        toast({
-          title: "Mensaje enviado",
-          description: (
-            <div>
-              {Object.entries(values).map(([key, value]) => (
-                <div key={key}>
-                  <strong>{key}</strong>: {value}
-                </div>
-              ))}
-            </div>
-          ),
-        });
+    axios
+      .post(`/api/contact`, values)
+      .then((response) => {
+        toastAlert.update(
+          toast({
+            title: response.data,
+            description: "Gracias por contactarnos, te responderemos pronto.",
+            duration: 4000,
+          }),
+        );
       })
-      .catch(() => {
-        toast({
-          title: "Error al enviar el mensaje",
-          description: "Por favor intenta de nuevo",
-          variant: "destructive",
-        });
+      .catch((error) => {
+        toastAlert.update(
+          toast({
+            title: error.response.data,
+            description: "Por favor inténtalo más tarde.",
+            duration: 4000,
+          }),
+        );
+        console.error(error);
       });
+
     form.reset();
-  }
+  };
 
   return (
     <>
@@ -127,8 +78,8 @@ export default function ContactForm() {
       <div className="bg-primary text-white">
         <Form {...form}>
           <form
-            onSubmit={form.handleSubmit(onSubmit)}
             className="container space-y-3"
+            onSubmit={form.handleSubmit(onSubmit)}
           >
             <div className="grid lg:grid-cols-3">
               <div className="relative">
