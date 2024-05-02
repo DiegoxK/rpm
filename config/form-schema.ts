@@ -24,6 +24,9 @@ export const ContactSchema = z.object({
     }),
   phone: z
     .string()
+    .regex(/^\d+$/, {
+      message: "El teléfono solo puede contener números",
+    })
     .min(1, {
       message: "El teléfono debe tener al menos 1 caracteres",
     })
