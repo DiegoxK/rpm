@@ -8,6 +8,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useToast } from "@/components/ui/use-toast";
 import { useForm } from "react-hook-form";
 
+import axios from "axios";
+
 import Image from "next/image";
 import {
   Form,
@@ -16,7 +18,6 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { sendEmail } from "@/lib/actions";
 import { ContactSchema, ContactType } from "@/config/form-schema";
 
 export default function ContactForm() {
@@ -33,37 +34,30 @@ export default function ContactForm() {
     },
   });
 
-  const onSubmit = async (values: ContactType) => {
+  const onSubmit = (values: ContactType) => {
     const toastAlert = toast({
       title: "Enviando mensaje",
       description: "Por favor espera un momento",
       duration: 10000000,
     });
 
-    sendEmail(values)
+    axios
+      .post(`/api/contact`, values)
       .then((response) => {
         toastAlert.update(
           toast({
-            title: response.message,
-            description: (
-              <div>
-                {Object.entries(values).map(([key, value]) => (
-                  <div key={key}>
-                    <strong>{key}</strong>: {value}
-                  </div>
-                ))}
-              </div>
-            ),
-            duration: 2000,
+            title: response.data,
+            description: "Gracias por contactarnos, te responderemos pronto.",
+            duration: 4000,
           }),
         );
       })
       .catch((error) => {
         toastAlert.update(
           toast({
-            title: error.message,
+            title: error.response.data,
             description: "Por favor inténtalo más tarde.",
-            duration: 2000,
+            duration: 4000,
           }),
         );
         console.error(error);
