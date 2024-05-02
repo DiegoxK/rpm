@@ -35,10 +35,10 @@ export async function POST(req: NextRequest) {
     to: `contacto@resultadospublicitariosmedellin.com`,
     subject: `Mensaje de ${company}`,
     text: `
-    Nombre: ${fullname}
-Empresa: ${company}
-Teléfono: ${phone}
-Email: ${email}
+**Nombre:** ${fullname}
+**Empresa:** ${company}
+**Teléfono:** ${phone}
+**Email:** ${email}
 
 ${message}
     `,
