@@ -78,25 +78,25 @@ export default function LandPage() {
 
   const qualities = [
     {
-      icon: assets.qualities.Comunication,
+      icon: assets.qualities.Local,
       title: "Somos Locales",
       description:
         "Contamos con conocimiento profundo de la publicidad en Colombia para brindarte la mejor estrategia.",
     },
     {
-      icon: assets.qualities.Efficiency,
+      icon: assets.qualities.Guarantee,
       title: "Garantía",
       description:
         "Te garantizamos un servicio de calidad excepcional y nos aseguraremos de que tengas los resultados deseados.",
     },
     {
-      icon: assets.qualities.Guarantee,
+      icon: assets.qualities.Comunication,
       title: "Comunicación Efectiva",
       description:
         "Podrás comunicarte rápidamente con nuestro personal, que te brindará una atención transparente, clara y concisa.",
     },
     {
-      icon: assets.qualities.Local,
+      icon: assets.qualities.Efficiency,
       title: "Eficiencia Competitiva",
       description:
         "Nuestra filosofía de trabajo se basa en la productividad. Te entregaremos los mejores resultados en el menor tiempo posible.",
