@@ -36,19 +36,6 @@ export default function LandPage() {
 
   const services = [
     {
-      img: assets.services.ServiceWeb,
-      icon: assets.services.WebIcon,
-      decor: assets.services.Decor1,
-      title: "DESARROLLO WEB",
-      description:
-        "Sé visible 24/7,  gana credibilidad, capta clientes y potencia tus ventas.",
-      bulletPoints: [
-        "Desarrollo web profesional.",
-        "Diseño UI/UX personalizado.",
-        "Mantenimiento y soporte continuo.",
-      ],
-    },
-    {
       img: assets.services.ServiceContent,
       icon: assets.services.ContentIcon,
       decor: assets.services.Decor2,
