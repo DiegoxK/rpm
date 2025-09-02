@@ -3,7 +3,7 @@
 
 **[Ver la aplicación en vivo](https://rpmedellin.vercel.app)**
 
-¡Bienvenido al repositorio del sitio web de RPM! Este proyecto es una landing page moderna y profesional desarrollada para la empresa "Resultados Publicitarios Medellín". El objetivo principal es presentar los servicios de la empresa y proporcionar un medio de contacto directo a través de un formulario funcional.
+Este proyecto es una landing page moderna y profesional desarrollada para la empresa "Resultados Publicitarios Medellín". El objetivo principal es presentar los servicios de la empresa y proporcionar un medio de contacto directo a través de un formulario funcional.
 
 Este proyecto fue construido como parte de mi ruta de aprendizaje en desarrollo web, aplicando tecnologías modernas y mejores prácticas para crear una aplicación web full-stack robusta, atractiva y de alto rendimiento.
 
@@ -86,3 +86,4 @@ Sigue estos pasos para levantar el proyecto en tu entorno local:
 ---
 
 Este proyecto demuestra mi capacidad para construir aplicaciones web completas, desde el diseño de la interfaz hasta la implementación del backend. ¡Espero que te guste!
+
